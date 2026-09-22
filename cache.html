@@ -1,50 +1,52 @@
 <html manifest="cache.appcache">
-<head>
-<title>R-GAMER'S EXPLOIT 13.52</title>
-<style>
-body {
-    background-color: #ffffff;
-    color: #111111;
+  <head>
+    <title>R-GAMER'S EXPLOIT 13.52</title>
+    <style>
+   body {
+    background-color: #111111;
+    color: #e0e6ed;
     font-size: 20px;
     text-align: center;
     margin: 0;
     overflow: hidden;
 }
-.info {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    font-size: 22px;
-    font-family: monospace;
-    color: #111111;
-    transform: translate(-50%, -50%);
-}
-</style>
-<script>
-history.replaceState(null, null, 'index.html');
-var histlength = history.length;
-history.go(-histlength);
+      }
+      .info {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          font-size: 22px;
+          font-family: monospace;
+          color: #e0e6ed;
+          transform: translate(-50%, -50%);
+      }
+    </style>
+    <script>
+      history.replaceState(null, null, 'index.html');
+      var histlength = history.length;
+      history.go(-histlength);
 
-function DLProgress(e) {
-    var pct = Math.round(e.loaded / e.total * 100);
-    msgs.innerHTML = " instalando... R-GAMERS EXPLOIT..." + pct + "%";
-}
+      function DLProgress(e) {
+          var pct = Math.round(e.loaded / e.total * 100);
+          msgs.innerHTML = "INSTALANDO... R-GAMERS EXPLOIT..." + pct + "%";
+      }
 
-function DisplayCacheProgress() {
-    setTimeout(function () {
-        msgs.innerHTML = "R-GAMERS EXPLOIT <b>Cache OK</b>";
-    }, 2000);
-    setTimeout(function () {
-        location.reload();
-    }, 3000);
-}
+      function DisplayCacheProgress() {
+          setTimeout(function () {
+              msgs.innerHTML = "R-GAMERS EXPLOIT <b>LISTO</b>";
+          }, 2000);
+          setTimeout(function () {
+              location.reload();
+          }, 3000);
+      }
 
-window.applicationCache.addEventListener("progress",    DLProgress,           false);
-window.applicationCache.oncached     = function (e) { DisplayCacheProgress(); };
-window.applicationCache.onupdateready = function (e) { DisplayCacheProgress(); };
-</script>
-</head>
-<body>
-<div id="msgs" class="info"></div>
-</body>
+      window.applicationCache.addEventListener("progress",    DLProgress,           false);
+      window.applicationCache.oncached     = function (e) { DisplayCacheProgress(); };
+      window.applicationCache.onupdateready = function (e) { DisplayCacheProgress(); };
+    </script>
+  </head>
+  <body>
+    <div id="msgs" class="info"></div>
+  </body>
 </html>
+
