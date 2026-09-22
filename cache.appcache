@@ -6,6 +6,7 @@ cache.html
 jb.html 
 jb.js
 core.js 
+fondo.jpg
 mem.js 
 int64.js 
 ps4_offsets.js 
@@ -20,7 +21,8 @@ patches/1302.bin
 patches/1350.bin 
 patches/1352.bin 
 core.js?v=10 
-jb.js?v=10 
+jb.js?v=10
+logo_raw.png
 
 NETWORK:
 *
