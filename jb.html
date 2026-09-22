@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>MANSOOR0X // NVS</title>
+    <title>R-GAMER'S EXPLOIT 13.52</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
-
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap');   
+#brand img { width:100px; height:100px; margin-right:px; border-radius:0%;
+        vertical-align:middle;--color-bg: #05070a;
+        --color-initial: #52688f;
+        --color-ok: #00ff88;
+        --color-fail: #ff3333;
+        --color-text: #e0e6ed;
+        --glass: blur(20px) saturate(180%);}
       :root {
         --color-bg: #05070a;
         --color-initial: #52688f;
@@ -35,28 +41,53 @@
         overflow: hidden;
         perspective: 1000px;
       }
+      #brandS { text-align:center; font-size:11px; letter-spacing:.1em; padding:px 16px; background:transparent;
+           border-bottom:1px; solid #1e2732; }  
+      #brandA { text-align:center; font-size:11px; letter-spacing:.3em; padding:px px; background:transparent;
+           border-bottom:0px; solid #1e2732; }   
 
       body::before {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: 
-          radial-gradient(at 10% 20%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
-          radial-gradient(at 90% 80%, rgba(8, 145, 178, 0.15) 0px, transparent 50%);
+         margin:0;
+    padding:0;
+    min-height:100%;
+    background:#0b0d10 url("fondo.jpg") center center / cover no-repeat fixed;
+    color:#c8ced8;
         opacity: 0.8;
         z-index: -1;
+      }
+       #main-containerS {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 1/1;
+        
+        backdrop-filter: var(--glass);
+        -webkit-backdrop-filter: var(--glass);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius:35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.6s var(--ease);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4), 
+                    inset 0 0 0 1px rgba(255,255,255,0.05);
       }
 
       #main-container {
         position: relative;
-        width: 90%;
-        max-width: 400px;
+        width: 100%;
+        max-width: 450px;
         aspect-ratio: 1/1;
-        background: rgba(255, 255, 255, 0.03);
+        background: radial-gradient(at 10% 20%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
+          radial-gradient(at 90% 80%, rgba(8, 145, 178, 0.15) 0px, transparent 50%);
         backdrop-filter: var(--glass);
         -webkit-backdrop-filter: var(--glass);
         border: 1px solid rgba(255, 255, 255, 0.06);
-        border-radius: 40px;
+        border-radius:35px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -80,10 +111,10 @@
 
       #brand {
         font-weight: 900;
-        font-size: 24px;
+        font-size: 20px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         background: linear-gradient(to bottom right, #ffffff, #8b9bb4);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -115,8 +146,8 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
-        border: 3px solid var(--color-initial);
+        border-radius: 100%;
+        border: 2px solid var(--color-initial);
         animation: subtle-pulse 2s infinite;
         transition: all 0.5s var(--ease);
       }
@@ -225,31 +256,32 @@
         position: fixed;
         bottom: 20px;
         font-family: 'JetBrains Mono', monospace;
-        font-size: 10px;
+        font-size: 13px;
         color: rgba(255, 255, 255, 0.2);
         letter-spacing: 0.2em;
       }
     </style>
   </head>
   <body>
-
+    <div id="main-containerS">
     <div id="main-container">
-        <div id="brand">MANSOOR0X</div>
+    <div id="brand"><img src="logo_raw.png" alt="" width="10" height="10"></div>
+        <div id="brand">R-GAMER'S</div>
         <div id="visual-indicator">
             <div id="spin"></div>
             <div class="pulse"></div>
             <div class="core"></div>
         </div>
     </div>
-
-    <div id="msg">Restart your console</div>
+<div id="brandA"><b>52072114  /  55064378  /  59511352</b></div>
+    <div id="msg">Reinicia tu consola</div>
     
     <div id="wrap">
       <div id="state"></div>
       <div id="out"></div>
     </div>
-
-    <div id="footer">MANSOOR0X // NVS_CORE</div>
+</div>
+    <div id="footer">TALLER R-GAMER'S / GRANMA © 2026</div>
 
     <script type="module">
       import "./jb.js?v=10";
