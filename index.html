@@ -1,15 +1,40 @@
-<!-- © 2026 mansoor0x — PS4 Exploit -->
+<!-- © 2026 r-gamer's — PS4 Exploit -->
 <html manifest="cache.appcache">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>mansoor0x</title>
+    <title>R-GAMER'S EXPLOIT 13.52</title>
     <style>
-        body {
-            background: #ffffff;
-            color: #111111;
-            font: 15px/1.5 monospace;
-            margin: 20px;
+       html, body {
+    margin:0;
+    padding:0;
+    min-height:100%;
+    background:#0b0d10 url("fondo.jpg") center center / cover no-repeat fixed;
+    color:#c8ced8;
+    font:15px/1.45 "Segoe UI", system-ui, sans-serif;
+  #brand { font-size:17px; text-align:center; padding:8px 10px; background:transparent; }
+  #brand img { width:100px; height:100px; margin-right:8px; border-radius:0%;
+               vertical-align:middle; }
+  #brand b { font-size:30px; font-weight:700; letter-spacing:.2em;
+             color:#e6ebf2; vertical-align:middle; text-align:center }
+  #brandd { font-size:30px; font-weight:700; letter-spacing:.14em;
+             color:0e1116; background:#transparent;  text-align:center;}
+  #brandS { text-align:center; font-size:11px; letter-spacing:.1em; padding:px 16px; background:transparent;
+           border-bottom:1px solid #1e2732; }
+  #brandA { font-size:13px; font-weight:700; letter-spacing:.5em;
+             color:0e1116; background:transparent;  text-align:center; }
+  #console { font-size:19px; font-weight:300; letter-spacing:em;
+             color:0e1116; background:transparent;  text-align:center; 
+  #warn { padding:14px 12px; background:#3a0f10; color:#ffdede;
+          border-bottom:2px solid #a5202a; text-align:center;
+          font-weight:900; font-size:17px; letter-spacing:.08em;
+          line-height:1.35; text-transform:uppercase;
+          text-shadow:0 0 6px rgba(255,60,60,.45);
+          animation:warnpulse 1.6s ease-in-out infinite; }
+         
+  }
+  body {
+    min-height:100vh;
         }
         #console {
             font-family: monospace;
@@ -26,9 +51,11 @@
     </script>
 </head>
 <body>
-    mansoor0x · PS4 Exploit<br>
-    © 2026 mansoor0x<br>
-    <br>
+<div id="brand"><img src="logo_raw.png" alt="" width="28" height="28"></div>
+<div id="brandd"><b>R-GAMER'S</b></div>
+<div id="brandA"><b>JIGUANI - MANZANILLO</b></div>
+<div id="brandA"><b>52072114  -  55064378  -  59511352</b></div>
+<div id="brandS"><b>PS4 EXPLOIT 11.00 - 13.52</b></div>
     <pre id="console"></pre>
 </body>
 <script>
@@ -59,13 +86,13 @@
     var forced    = params.get("force") === "1";
     var supported = forced || (fwnum !== null && SUPPORTED[fwnum] === 1);
 
-    print("firmware: " + (key || "unknown"));
-    print("supported: " + (supported ? "yes" : "no"), supported ? "ok" : "bad");
+    print("SISTEMA: " + (key || "DESCONOCIDO"));
+    print("SOPORTE: " + (supported ? "SI" : "NO"), supported ? "ok" : "bad");
 
     var target = "jb.html" + location.search;
 
     function go() {
-        print("loading exploit...", "warn");
+        print("CARGANDO EXPLOIT...", "warn");
         location.replace(target);
     }
 
@@ -81,7 +108,7 @@
     }
 
     if (!supported) {
-        print("UNSUPPORTED FIRMWARE — tap / press X to run anyway", "bad");
+        print("FIRMWARE NO SOPORTADO — PRESIONA X PARA LANZAR NUEVAMENTE", "bad");
         waitForTap("", go);
         return;
     }
@@ -98,10 +125,10 @@
     } else if (ac.status === ac.UPDATEREADY) {
         try { ac.swapCache(); } catch (e) {}
         print("update downloaded", "ok");
-        waitForTap("UPDATE READY — tap / press X to reload", function () { location.reload(); });
+        waitForTap("LISTO / PRESIONA X PARA RECARGAR", function () { location.reload(); });
     } else {
-        print("checking cache...");
-        ac.addEventListener("downloading",
+        print("ANALIZANDO CACHE...");
+        ac.addEventListener("DESCARGANDO",
             function () { print("caching for offline (first run)..."); }, false);
         ac.addEventListener("progress", function (e) {
             if (e && e.total)
@@ -109,25 +136,25 @@
         }, false);
         ac.addEventListener("cached", function () {
             print("cached for offline use", "ok");
-            waitForTap("CACHED — tap / press X to run", go);
+            waitForTap("LISTO / PRESIONA X PARA LANZAR", go);
         }, false);
         ac.addEventListener("updateready", function () {
             try { ac.swapCache(); } catch (e) {}
             print("update downloaded", "ok");
-            waitForTap("UPDATE READY — tap / press X to reload",
+            waitForTap("LISTO / PRESIONA X PARA RECARGAR",
                        function () { location.reload(); });
         }, false);
         ac.addEventListener("noupdate", function () {
-            print("cached — offline ready", "ok");
+            print("LISTO PARA USAR SIN CONEXION", "ok");
             go();
         }, false);
         ac.addEventListener("error", function () {
             print("cache unavailable");
-            waitForTap("CACHE FAILED — tap / press X to run anyway", go);
+            waitForTap("FALLIDO — PRESIONA X PARA LANZAR NUEVAMENTE", go);
         }, false);
         ac.addEventListener("obsolete", function () {
             print("cache obsolete");
-            waitForTap("CACHE OBSOLETE — tap / press X to run", go);
+            waitForTap("OBSOLETO — PRESIONA X PARA LANZAR NUEVAMENTE", go);
         }, false);
     }
 })();
